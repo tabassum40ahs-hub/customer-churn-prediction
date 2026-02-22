@@ -1,54 +1,68 @@
-\# 📉 Customer Churn Prediction
+# 📉 Customer Churn Prediction
+
+This project predicts customer churn using machine learning to support proactive customer retention strategies.
 
 
+# 📊 Dataset
 
-This project predicts customer churn using machine learning.
+Telco Customer Churn Dataset
 
+7,043 customers
 
+21 features
 
-\## 📊 Dataset
-
-Telco Customer Churn Dataset  
-
-\- 7,043 customers  
-
-\- 21 features  
-
-\- Churn rate: 26.5%
+Churn rate: 26.5% (class imbalance present)
 
 
+# 🧠 Approach
 
-\## 🧠 Approach
+Data cleaning and preprocessing
 
-\- Logistic Regression
+Removed customerID to prevent data leakage
 
-\- SMOTE for class imbalance
+One-hot encoding using pd.get_dummies()
 
-\- Threshold tuning (0.4)
+Feature scaling using StandardScaler
 
-\- 5-Fold Cross Validation
+Logistic Regression as baseline model
 
+Handled class imbalance using class_weight='balanced'
 
+Model evaluation using Confusion Matrix, Classification Report, ROC-AUC
 
-\## 📈 Final Performance
-
-\- Recall: 60%
-
-\- Accuracy: 80%
-
-\- ROC-AUC: 0.84
+5-Fold Cross Validation to verify model stability
 
 
+# 📊 Model Comparison
 
-\## 🎯 Business Impact
-
-Improved churn detection from 32% (baseline) to 60%,  
-
-helping identify at-risk customers for proactive retention strategies.
-
+| Model                   | Recall | Precision | Accuracy |
+| ----------------------- | ------ | --------- | -------- |
+| Baseline Logistic       | 55%    | 64%       | 80%      |
+| Logistic + Class Weight | 79%    | 49%       | 72%      |
 
 
-\## 🔗 Author
+# ✅ Final Model Selection
+
+The Logistic Regression model with class_weight='balanced' was selected as the final model.
+
+It improved churn recall from 55% to 79%, significantly reducing missed churn customers (false negatives).
+
+Although overall accuracy decreased slightly, the higher recall better aligns with the business objective of identifying at-risk customers.
+
+ROC-AUC remained strong at approximately 0.83, indicating stable discriminatory performance.
+
+# 🎯 Business Impact
+
+The final model can identify 79% of churn customers in advance, enabling businesses to:
+
+Design targeted retention campaigns
+
+Reduce revenue loss
+
+Improve customer lifetime value
+
+
+# 🔗 Author
 
 Tabassum Shaikh
 
