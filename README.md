@@ -6,6 +6,10 @@ This project predicts customer churn using machine learning to support proactive
 Try the deployed ML model here: 
 👉 https://customer-churn-prediction-app-ds.streamlit.app/
 
+# 🖥️ Application Preview
+
+![Churn App Screenshot](app_screenshot.png)
+
 # 📊 Dataset
 
 Telco Customer Churn Dataset
