@@ -2,6 +2,9 @@
 
 This project predicts customer churn using machine learning to support proactive customer retention strategies.
 
+# 🚀 Live Application 
+Try the deployed ML model here: 
+👉 https://customer-churn-prediction-app-ds.streamlit.app/
 
 # 📊 Dataset
 
@@ -13,6 +16,14 @@ Telco Customer Churn Dataset
 
 Churn rate: 26.5% (class imbalance present)
 
+# ⚙️ Tech Stack
+
+- Python
+- Pandas & NumPy
+- Scikit-learn
+- SMOTE (for comparison experiments)
+- Streamlit (Deployment)
+- Git & GitHub
 
 # 🧠 Approach
 
@@ -24,7 +35,7 @@ One-hot encoding using pd.get_dummies()
 
 Feature scaling using StandardScaler
 
-Logistic Regression as baseline model
+Logistic Regression used as baseline model due to interpretability and suitability for binary classification.
 
 Handled class imbalance using class_weight='balanced'
 
@@ -61,6 +72,17 @@ Reduce revenue loss
 
 Improve customer lifetime value
 
+# 🌍 Deployment
+
+The model is deployed using Streamlit Cloud.
+
+Users can input customer details and instantly receive churn risk predictions based on a trained Logistic Regression model.
+
+The deployment pipeline includes:
+- Saved model (.pkl)
+- Saved scaler
+- Feature column alignment
+- Real-time probability prediction
 
 # 🔗 Author
 
